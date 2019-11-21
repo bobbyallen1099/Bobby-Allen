@@ -1,0 +1,35 @@
+.header {
+    @extend .py-2;
+    border-bottom: 1px solid $gray-400;
+
+    &__wrapper {
+        @extend .d-flex;
+        @extend .justify-content-between;
+        @extend .align-items-center;
+
+        &--logo {
+            @extend .h5;
+            @extend .m-0;
+        }
+        &--menu {
+            @extend .d-flex;
+            @extend .list-unstyled;
+            @extend .m-0;
+            @extend .align-items-center;
+
+            &--item {
+                @extend .list-unstyled;
+
+                a {
+                    @extend .py-2;
+                    @extend .px-3;
+
+                    &.btn {
+                        @extend .ml-2;
+                        @extend .px-3;
+                }
+                }
+            }
+        }
+    }
+}
