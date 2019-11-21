@@ -1,0 +1,16 @@
+.technical-skills {
+    @extend .py-4;
+    
+    &__item {
+        @extend .card;
+        @extend .card-body;
+
+        &--title {
+            @extend .h3;
+        }
+        &--text {
+            @extend .mb-3;
+            
+        }
+    }
+} 

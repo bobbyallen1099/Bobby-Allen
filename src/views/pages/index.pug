@@ -10,3 +10,12 @@ block content
                         .banner__content--title= home_banner_title
                         .banner__content--text= home_banner_text
                         a.btn.btn-primary(href= home_banner_button_link)= home_banner_button_text
+    .technical-skills
+        .container
+            .row
+                each skill in home_technical_skills
+                    .col-md-6
+                        .technical-skills__item
+                            .technical-skills__item--title= skill.skill_title
+                            .technical-skills__item--text= skill.skill_text
+                            a.btn.btn-primary(href="#") Learn more
