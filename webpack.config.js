@@ -1,14 +1,35 @@
-var path = require('path');
+const path = require('path');
+const webpack = require('webpack');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackHarddiskPlugin = require('html-webpack-harddisk-plugin');
 
 module.exports = {
     entry: './src/js/index.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-        publicPath: '/dist'
+        filename: "main.js",
+        path: path.resolve(__dirname, "dist"),
+        publicPath: "/dist"
     },
+    devServer: {
+        contentBase: path.join(__dirname, 'dist'),
+        hot: true,
+        open: true,
+        progress: true
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: "./src/views/pages/index.pug",
+            alwaysWriteToDisk: true,
+        }),
+        new HtmlWebpackHarddiskPlugin()
+    ],
     module: {
         rules: [
+            {
+                test: /\.pug$/,
+                use: ['html-loader?attrs=false', 'pug-html-loader']
+            },
             {
                 test: /\.s[ac]ss$/i,
                 use: [
@@ -22,12 +43,6 @@ module.exports = {
             },
         ],
     },
-    devServer: {
-        port: 8080,
-        contentBase: ['./src', './public'], // both src and output dirs
-        inline: true,
-        hot: true
-    },
     resolve: {
         alias: {
             jquery: "jquery/src/jquery",
@@ -35,5 +50,3 @@ module.exports = {
         }
     }
 };
-
-// npm install css-loader style-loader --save-dev

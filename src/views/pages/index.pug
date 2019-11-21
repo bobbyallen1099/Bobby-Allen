@@ -1,0 +1,12 @@
+extends ../layout.pug
+
+block content
+    .banner 
+        .container
+            .row
+                .col-md-8
+                    .banner__content
+                        .banner__content--subtitle= home_banner_subtitle
+                        .banner__content--title= home_banner_title
+                        .banner__content--text= home_banner_text
+                        a.btn.btn-primary(href= home_banner_button_link)= home_banner_button_text
