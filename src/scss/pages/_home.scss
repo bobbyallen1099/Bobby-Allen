@@ -1,12 +1,19 @@
 .technical-skills {
-    @extend .py-4;
+    margin-top: -2rem;
     
     &__item {
         @extend .card;
         @extend .card-body;
+        @extend .mb-4;
+
+        @include respond-above(sm) {
+            margin-bottom: 0;
+        }
+
 
         &--title {
             @extend .h3;
+            @extend .font-weight-bold;
         }
         &--text {
             @extend .mb-3;

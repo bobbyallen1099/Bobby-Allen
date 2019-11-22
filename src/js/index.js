@@ -1,4 +1,5 @@
 import '../scss/app.scss';
+import homeBanner from '../images/home-banner.svg';
 
 var $ = require("jquery");
 // var Pjax = require("pjax");

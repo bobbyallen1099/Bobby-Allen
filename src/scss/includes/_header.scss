@@ -12,7 +12,8 @@
             @extend .m-0;
         }
         &--menu {
-            @extend .d-flex;
+            @extend .d-none;
+            @extend .d-md-flex;
             @extend .list-unstyled;
             @extend .m-0;
             @extend .align-items-center;

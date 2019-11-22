@@ -1,9 +1,26 @@
 .banner {
     background: $light;
     border-bottom: 1px solid $gray-400;
-    padding: 8rem 0;
+    padding: 2rem 0 4rem;
+    position: relative;
+
+    @include respond-above(sm) {
+        padding: 4rem 0 6rem;
+    }
+    @include respond-above(md) {
+        padding: 6rem 0 8rem;
+    }
+
+
+    .row {
+        justify-content: space-between;
+        align-items: center;
+    }
 
     &__content {
+        position: relative;
+        z-index: 2;
+
         &--subtitle {
             line-height: 1;
 
@@ -11,11 +28,22 @@
             @extend .h6;
         }
         &--title {
-            @extend .h2;
+            @extend .h3;
             @extend .m-0;
+            @extend .font-weight-bold;
         }
         &--text {
             @extend .my-2;
         }
+        a.btn {
+            width: 100%;
+
+            @include respond-above(sm) {
+                width: auto;
+            }
+        }
+    }
+    &__image {
+        width: 100%;
     }
 }
