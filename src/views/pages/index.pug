@@ -22,6 +22,30 @@ block content
                             .technical-skills__item--title= skill.skill_title
                             .technical-skills__item--text= skill.skill_text
                             a.btn.btn-primary(href="#") Learn more
-    .reviews
-    .work
-    .personal-projects
+    .about-me
+        .container
+            .row
+                .col-md-5
+                    img.banner__image(src="dist/img/about-me.svg")
+                .col-md-6
+                    .about-me__content
+                        .about-me__content--subtitle Learn
+                        .about-me__content--title About me
+                        .about-me__content--text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit odio diam, at lacinia ante venenatis eu. Nulla sed sem ullamcorper, ultricies massa ut, rhoncus risus. Aliquam at nisi sem. Fusce tincidunt et turpis eget hendrerit.
+
+                        a.btn.btn-primary(href="#") Contact me
+    .my-work
+        .container
+            .my-work__content
+                .my-work__content--subtitle Explore
+                .my-work__content--title My work
+            .row
+                each work in home_my_work
+                    .col-md-4
+                        .work
+                            .work__image(style="background-image: url('"+ work.work_image +"')")
+                            .work__content
+                                .work__content--title= work.work_title
+                                .work__content--description= work.work_text
+                                a.work__content--link(href= work.work_link) View
+    .contact
