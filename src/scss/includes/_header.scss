@@ -1,6 +1,13 @@
 .header {
-    @extend .py-2;
     border-bottom: 1px solid $gray-400;
+    background-color: $white;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    @extend .py-2;
 
     &__wrapper {
         @extend .d-flex;

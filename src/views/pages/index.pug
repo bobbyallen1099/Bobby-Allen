@@ -29,11 +29,11 @@ block content
                     img.banner__image(src="dist/img/about-me.svg")
                 .col-md-6
                     .about-me__content
-                        .about-me__content--subtitle Learn
-                        .about-me__content--title About me
-                        .about-me__content--text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit odio diam, at lacinia ante venenatis eu. Nulla sed sem ullamcorper, ultricies massa ut, rhoncus risus. Aliquam at nisi sem. Fusce tincidunt et turpis eget hendrerit.
+                        .about-me__content--subtitle= home_about_me_subtitle
+                        .about-me__content--title= home_about_me_title
+                        .about-me__content--text= home_about_me_text
 
-                        a.btn.btn-primary(href="#") Contact me
+                        a.work__content--link(href= home_about_me_button_text)= home_about_me_button_text
     .my-work
         .container
             .my-work__content

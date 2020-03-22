@@ -14,12 +14,40 @@ module.exports = {
         contentBase: path.join(__dirname, 'dist'),
         hot: true,
         open: true,
-        progress: true
+        progress: true,
+        historyApiFallback: {
+            rewrites: [
+              { from: /^\/$/, to: '/dist/index.html' },
+              { from: /^\/about/, to: '/dist/about.html' },
+              { from: /^\/work/, to: '/dist/work.html' },
+              { from: /^\/contact/, to: '/dist/contact.html' },
+              { from: /./, to: '/dist/index.html' }
+            ]
+          }
     },
     plugins: [
+        // Home
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: "./src/views/pages/index.pug",
+            alwaysWriteToDisk: true,
+        }),
+        // About
+        new HtmlWebpackPlugin({
+            filename: 'about.html',
+            template: "./src/views/pages/about.pug",
+            alwaysWriteToDisk: true,
+        }),
+        // Work
+        new HtmlWebpackPlugin({
+            filename: 'work.html',
+            template: "./src/views/pages/work.pug",
+            alwaysWriteToDisk: true,
+        }),
+        // Contact
+        new HtmlWebpackPlugin({
+            filename: 'contact.html',
+            template: "./src/views/pages/contact.pug",
             alwaysWriteToDisk: true,
         }),
         new HtmlWebpackHarddiskPlugin()

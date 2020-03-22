@@ -1,22 +1,58 @@
 block pagecontent
     //- Global
+
+    //- Page routes
+    - var routes = [
+    -   {
+    -       'page_name': 'Home',  
+    -       'page_route': '/',  
+    -       'link_button': false
+    -   },
+    -   {
+    -       'page_name': 'About',  
+    -       'page_route': '/about',  
+    -       'link_button': false
+    -   },
+    -   {
+    -       'page_name': 'Work',  
+    -       'page_route': '/work',  
+    -       'link_button': false
+    -   },
+    -   {
+    -       'page_name': 'Contact',  
+    -       'page_route': '/contact',  
+    -       'link_button': true
+    -   },
+    - ]
     
     //- Home
+    //- Home banner
     - var home_banner_subtitle = "I'm a"
-    - var home_banner_title = "Experienced designer & web development"
-    - var home_banner_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit odio diam, at lacinia ante venenatis eu. Nulla sed sem ullamcorper, ultricies massa ut, rhoncus risus. Aliquam at nisi sem. Fusce tincidunt et turpis eget hendrerit."
+    - var home_banner_title = "Experienced designer & web developer"
+    - var home_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
     - var home_banner_button_text = "Learn more"
     - var home_banner_button_link = "#"
+
+    //- Home skills
     - var home_technical_skills = [
     -   {  
     -       'skill_title': 'Web Development',  
-    -       'skill_text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit odio diam, at lacinia ante venenatis eu. Nulla sed sem ullamcorper, ultricies massa ut, rhoncus risus. Aliquam at nisi sem. Fusce tincidunt et turpis eget hendrerit.'
+    -       'skill_text': 'I have skills for both backend and front end website development, always assuring I have clean and functional websites.'
     -   },
     -   {  
     -       'skill_title': 'Design',  
-    -       'skill_text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit odio diam, at lacinia ante venenatis eu. Nulla sed sem ullamcorper, ultricies massa ut, rhoncus risus. Aliquam at nisi sem. Fusce tincidunt et turpis eget hendrerit.'
+    -       'skill_text': 'Having a website both looking great and easy to use is always something I strive for, UI and UX are both important for me.'
     -   }
     - ]
+    
+    //- Home about
+    - var home_about_me_subtitle = "Learn"
+    - var home_about_me_title = "About me"
+    - var home_about_me_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
+    - var home_about_me_button_text = "Learn more"
+    - var home_about_me_button_link = "#"
+
+    //- Home my work
     - var home_my_work = [
     -   {  
     -       'work_image': 'dist/img/john-fowlers.jpg',  
@@ -37,3 +73,27 @@ block pagecontent
     -       'work_link': '#'
     -   },
     - ]
+
+    //- About
+    //- About banner
+    - var about_banner_subtitle = "Learn"
+    - var about_banner_title = "About me"
+    - var about_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
+    - var about_banner_button_text = "Learn more"
+    - var about_banner_button_link = "#"
+
+    //- Work
+    //- Work banner
+    - var work_banner_subtitle = "Discover"
+    - var work_banner_title = "My work"
+    - var work_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
+    - var work_banner_button_text = "Learn more"
+    - var work_banner_button_link = "#"
+
+    //- Contact
+    //- Contact banner
+    - var contact_banner_subtitle = "Let's get in"
+    - var contact_banner_title = "Get in contact"
+    - var contact_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
+    - var contact_banner_button_text = "Learn more"
+    - var contact_banner_button_link = "#"

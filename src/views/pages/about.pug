@@ -1,0 +1,12 @@
+extends ../layout.pug
+
+block content
+    .banner 
+        .container
+            .row
+                .col-md-6.order-2.order-lg-1
+                    .banner__content
+                        .banner__content--subtitle= about_banner_subtitle
+                        .banner__content--title= about_banner_title
+                        .banner__content--text= about_banner_text
+                        a.btn.btn-primary(href= about_banner_button_link)= about_banner_button_text
