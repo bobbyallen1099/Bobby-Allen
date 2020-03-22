@@ -2,98 +2,114 @@ block pagecontent
     //- Global
 
     //- Page routes
-    - var routes = [
-    -   {
-    -       'page_name': 'Home',  
-    -       'page_route': '/',  
-    -       'link_button': false
-    -   },
-    -   {
-    -       'page_name': 'About',  
-    -       'page_route': '/about',  
-    -       'link_button': false
-    -   },
-    -   {
-    -       'page_name': 'Work',  
-    -       'page_route': '/work',  
-    -       'link_button': false
-    -   },
-    -   {
-    -       'page_name': 'Contact',  
-    -       'page_route': '/contact',  
-    -       'link_button': true
-    -   },
-    - ]
-    
+    -
+        var routes = [
+            {
+                'page_name': 'Home',  
+                'page_route': '/',  
+                'link_button': false
+            },
+            {
+                'page_name': 'About',  
+                'page_route': '/about',  
+                'link_button': false
+            },
+            {
+                'page_name': 'Work',  
+                'page_route': '/work',  
+                'link_button': false
+            },
+            {
+                'page_name': 'Contact',  
+                'page_route': '/contact',  
+                'link_button': true
+            },
+        ]
+
     //- Home
     //- Home banner
-    - var home_banner_subtitle = "I'm a"
-    - var home_banner_title = "Experienced designer & web developer"
-    - var home_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
-    - var home_banner_button_text = "Learn more"
-    - var home_banner_button_link = "#"
+    -
+        var home_banner_subtitle = "I'm a"
+        var home_banner_title = "Experienced designer & web developer"
+        var home_banner_text = "I'm a full stack developer with a passion for challenging and unique projects."
+        var home_banner_button_text = "Learn more"
+        var home_banner_button_link = "/about"
 
     //- Home skills
-    - var home_technical_skills = [
-    -   {  
-    -       'skill_title': 'Web Development',  
-    -       'skill_text': 'I have skills for both backend and front end website development, always assuring I have clean and functional websites.'
-    -   },
-    -   {  
-    -       'skill_title': 'Design',  
-    -       'skill_text': 'Having a website both looking great and easy to use is always something I strive for, UI and UX are both important for me.'
-    -   }
-    - ]
+    -
+        var home_technical_skills = [
+            {  
+            'skill_title': 'Web Development',  
+            'skill_text': 'I have skills for both backend and front end website development, always assuring I have clean and functional websites.'
+            },
+            {  
+            'skill_title': 'Design',  
+            'skill_text': 'Having a website both looking great and easy to use is always something I strive for, UI and UX are both important for me.'
+            }
+        ]
     
     //- Home about
-    - var home_about_me_subtitle = "Learn"
-    - var home_about_me_title = "About me"
-    - var home_about_me_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
-    - var home_about_me_button_text = "Learn more"
-    - var home_about_me_button_link = "#"
+    -
+        var home_about_me_subtitle = "Learn"
+        var home_about_me_title = "About me"
+        var home_about_me_text = "I've always been interested in anything computers since the young age of 13, since then I've grew my skills and focused on improving myself everyday."
+        var home_about_me_button_text = "Read more"
+        var home_about_me_button_link = "/about"
 
     //- Home my work
-    - var home_my_work = [
-    -   {  
-    -       'work_image': 'dist/img/john-fowlers.jpg',  
-    -       'work_title': 'John fowlers',  
-    -       'work_text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit odio diam, at lacinia ante venenatis eu. Nulla sed sem ullamcorper, ultricies massa ut, rhoncus risus. Aliquam at nisi sem. Fusce tincidunt et turpis eget hendrerit.',
-    -       'work_link': '#'
-    -   },
-    -   {  
-    -       'work_image': 'dist/img/marfleet.jpg',  
-    -       'work_title': 'Marfleets',  
-    -       'work_text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit odio diam, at lacinia ante venenatis eu. Nulla sed sem ullamcorper, ultricies massa ut, rhoncus risus. Aliquam at nisi sem. Fusce tincidunt et turpis eget hendrerit.',
-    -       'work_link': '#'
-    -   },
-    -   {  
-    -       'work_image': 'dist/img/hayward-moon.jpg',  
-    -       'work_title': 'Hayward Moon',  
-    -       'work_text': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas suscipit odio diam, at lacinia ante venenatis eu. Nulla sed sem ullamcorper, ultricies massa ut, rhoncus risus. Aliquam at nisi sem. Fusce tincidunt et turpis eget hendrerit.',
-    -       'work_link': '#'
-    -   },
-    - ]
+    -
+        var home_my_work = [
+            {   
+                'work_image': 'dist/img/john-fowlers.jpg',  
+                'work_title': 'John fowlers',  
+                'work_text': 'John Fowlers Solicitors is a leading firm of solicitors in Colchester, Essex. I built the website design for this website keeping it clean and functional.',
+                'work_link': 'https://www.johnfowlers.co.uk/'
+            },
+            {  
+                'work_image': 'dist/img/marfleet.jpg',  
+                'work_title': 'Marfleets',  
+                'work_text': 'Marfleet are building contractors with more than 40 years of building experience working across residential, commercial, education and civil engineering sectors. I built the website design for this website keeping it clean and functional.',
+                'work_link': 'https://www.marfleets.co.uk/'
+            },
+            {  
+                'work_image': 'dist/img/hayward-moon.jpg',  
+                'work_title': 'Hayward Moon',  
+                'work_text': 'Specialist property lawyers, offering conveyancing in Bury St Edmunds, Cambridge, Clacton, Colchester, Diss and Ipswich. I built the website design for this website keeping it clean and functional.',
+                'work_link': 'https://www.haywardmoon.co.uk/'
+            },
+        ]
 
     //- About
     //- About banner
-    - var about_banner_subtitle = "Learn"
-    - var about_banner_title = "About me"
-    - var about_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
-    - var about_banner_button_text = "Learn more"
-    - var about_banner_button_link = "#"
+    -
+        var about_banner_subtitle = "Learn"
+        var about_banner_title = "About me"
+        var about_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
+        var about_banner_button_text = "Get in contact"
+        var about_banner_button_link = "/contact"
+
+    //- About content
+    -
+        var about_me_subtitle = "Discover"
+        var about_me_title = "My story"
+        var about_me_text = "I've always been interested in anything computers since the young age of 13, since then I've grew my skills and focused on improving myself everyday. Learning new skills and expanding my horizons,  I always strive to improve and that's still a commitment I hold to this day. <br><br> In my free time I love to spend time with my family, listen to music, build computers and binge Netflix shows and watch youtube."
+
+    -
+        var about_lanuages_title = "My development Languages"
+        var about_lanuages = ["HTML", "CSS", "JS", "JQuery", "NPM", "Express", "Webpack", "HAML", "PUG", "SASS", "Laravel", "Ruby on rails", "PHP", "Coldfusion", "GIT", "MYSQL"]
 
     //- Work
     //- Work banner
-    - var work_banner_subtitle = "Discover"
-    - var work_banner_title = "My work"
-    - var work_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
-    - var work_banner_button_text = "Learn more"
-    - var work_banner_button_link = "#"
+    -
+        var work_banner_subtitle = "Discover"
+        var work_banner_title = "My work"
+        var work_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
+        var work_banner_button_text = "Get in contact"
+        var work_banner_button_link = "/contact"
 
     //- Contact
     //- Contact banner
-    - var contact_banner_subtitle = "Let's get in"
-    - var contact_banner_title = "Get in contact"
-    - var contact_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
-    - var contact_banner_button_text = "Learn more"
-    - var contact_banner_button_link = "#"
+    -
+        var contact_banner_subtitle = "Let's get in"
+        var contact_banner_title = "Get in contact"
+        var contact_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."

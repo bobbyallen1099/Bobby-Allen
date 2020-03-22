@@ -10,3 +10,13 @@ block content
                         .banner__content--title= work_banner_title
                         .banner__content--text= work_banner_text
                         a.btn.btn-primary(href= work_banner_button_link)= work_banner_button_text
+    .container.py-4
+        .row
+            each work in home_my_work
+                .col-md-4
+                    .work
+                        .work__image(style="background-image: url('"+ work.work_image +"')")
+                        .work__content
+                            .work__content--title= work.work_title
+                            .work__content--description= work.work_text
+                            a.work__content--link(href= work.work_link) View

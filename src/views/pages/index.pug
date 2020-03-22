@@ -21,7 +21,7 @@ block content
                         .technical-skills__item
                             .technical-skills__item--title= skill.skill_title
                             .technical-skills__item--text= skill.skill_text
-                            a.btn.btn-primary(href="#") Learn more
+                            a.btn.btn-primary(href="/about") Learn more
     .about-me
         .container
             .row
@@ -33,7 +33,7 @@ block content
                         .about-me__content--title= home_about_me_title
                         .about-me__content--text= home_about_me_text
 
-                        a.work__content--link(href= home_about_me_button_text)= home_about_me_button_text
+                        a.work__content--link(href= home_about_me_button_link)= home_about_me_button_text
     .my-work
         .container
             .my-work__content
