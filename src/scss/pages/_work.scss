@@ -1,0 +1,10 @@
+.work_section_title {
+    font-weight: 600;
+
+    @extend h3;
+}
+
+.work_section_text {
+    @extend h6;
+    @extend .mb-4;
+}
