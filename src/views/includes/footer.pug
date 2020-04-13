@@ -10,13 +10,13 @@ footer.footer
     .container
         .footer__content
             .row
-                .col-md-3
+                .col-md-3.py-1
                     h3 Bobby Allen
                     ul.p-0.pl-4
                         each page in routes
                             li
                                 a(href= page.page_route)= page.page_name
-                .col-md-6
+                .col-md-6.py-1
                     form(action="https://formspree.io/xgelpgng" method="post")
                         .d-flex.align-items-end
                             .form-group.m-0.w-100
@@ -24,7 +24,7 @@ footer.footer
                                 input#email(name="email" placeholder="Email address").form-control
                             div
                                 button.btn.btn-primary.ml-3 Register
-                .col-md-3
+                .col-md-3.py-1
                     h5 Useful links
                     ul.p-0.pl-4
                         li

@@ -1,12 +1,13 @@
 .footer {
+    background-color: $light;
     &__content {
         padding: 5rem 0;
     }
     &__copyright {
         padding: 1rem 0;
-        background-color: $light;
-        border-top: 1px solid darken($light, 10);
-        border-bottom: 1px solid darken($light, 10);
+        background-color: darken($light, 10);
+        border-top: 1px solid darken($light, 15);
+        border-bottom: 1px solid darken($light, 15);
 
         p {
             margin: 0;
