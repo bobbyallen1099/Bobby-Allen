@@ -1,7 +1,7 @@
 extends ../layout.pug
 
 block content
-    .banner 
+    .banner
         .container
             .row
                 .col-md-6.order-2.order-lg-1
@@ -9,42 +9,53 @@ block content
                         .banner__content--subtitle= work_banner_subtitle
                         .banner__content--title= work_banner_title
                         .banner__content--text= work_banner_text
-                        a.btn.btn-primary(href= work_banner_button_link target="_blank")= work_banner_button_text
+                        a.btn.btn-primary(href= work_banner_button_link)= work_banner_button_text
     .container.py-4
-        .row.pb-4
-            .col-md-12
-                .work_section_title Ruby on rails projects
-                .work_section_text These are pojects I build with Ruby On Rails while working for Digital Reflow, they are built using an open source CMS called 
-                    a(href="https://www.spinacms.com/") Spina
-            each work in my_work.ruby
-                .col-md-4
-                    .work
-                        .work__image(style="background-image: url('"+ work.work_image +"')")
-                        .work__content
-                            .work__content--title= work.work_title
-                            .work__content--description= work.work_text
-                            a.work__content--link(href= work.work_link target="_blank") View
-        .row.pb-4.pt-4
-            .col-md-6
-                .work_section_title Laravel projects
-            .col-md-6
-            each work in my_work.laravel
-                .col-md-4
-                    .work
-                        .work__image(style="background-image: url('"+ work.work_image +"')")
-                        .work__content
-                            .work__content--title= work.work_title
-                            .work__content--description= work.work_text
-                            a.work__content--link(href= work.work_link target="_blank") View
-        .row.pb-4.pt-4
-            .col-md-6
-                .work_section_title Node projects
-            .col-md-6
-            each work in my_work.node
-                .col-md-4
-                    .work
-                        .work__image(style="background-image: url('"+ work.work_image +"')")
-                        .work__content
-                            .work__content--title= work.work_title
-                            .work__content--description= work.work_text
-                            a.work__content--link(href= work.work_link target="_blank") View
+        .alert.alert-warning.mb-4 This website is still in beta, there will be more projects soon.
+        ul#pills-tab.nav.nav-pills.mb-3(role='tablist')
+            li.nav-item
+                a#pills-home-tab.nav-link.active(data-toggle='pill' href='#pills-ruby' role='tab' aria-controls='pills-ruby' aria-selected='true') Ruby on rails
+            li.nav-item
+                a#pills-profile-tab.nav-link(data-toggle='pill' href='#pills-laravel' role='tab' aria-controls='pills-laravel' aria-selected='false') Laravel
+            li.nav-item
+                a#pills-contact-tab.nav-link(data-toggle='pill' href='#pills-other' role='tab' aria-controls='pills-other' aria-selected='false') Other
+
+        #pills-tabContent.tab-content
+            #pills-ruby.tab-pane.fade.show.active(role='tabpanel')
+                .row.py-2
+                    .col-md-12.mb-2
+                        .work_section_title Ruby on rails projects
+                        .work_section_text These are pojects I build with Ruby On Rails while working for Digital Reflow, they are built using an open source CMS called
+                            a.ml-1(href="https://www.spinacms.com/") Spina
+                    each work in my_work.ruby
+                        .col-md-4
+                            .work
+                                .work__image(style="background-image: url('"+ work.work_image +"')")
+                                .work__content
+                                    .work__content--title= work.work_title
+                                    .work__content--description= work.work_text
+                                    a.work__content--link(href= work.work_link target="_blank") View
+            #pills-laravel.tab-pane.fade(role='tabpanel')
+                .row.py-2
+                    .col-md-12.mb-2
+                        .work_section_title Laravel projects
+                    each work in my_work.laravel
+                        .col-md-4
+                            .work
+                                .work__image(style="background-image: url('"+ work.work_image +"')")
+                                .work__content
+                                    .work__content--title= work.work_title
+                                    .work__content--description= work.work_text
+                                    a.work__content--link(href= work.work_link target="_blank") View
+            #pills-other.tab-pane.fade(role='tabpanel')
+                .row.py-2
+                    .col-md-12.mb-2
+                        .work_section_title Other projects
+                    each work in my_work.node
+                        .col-md-4
+                            .work
+                                .work__image(style="background-image: url('"+ work.work_image +"')")
+                                .work__content
+                                    .work__content--title= work.work_title
+                                    .work__content--description= work.work_text
+                                    a.work__content--link(href= work.work_link target="_blank") View

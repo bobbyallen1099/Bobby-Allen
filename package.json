@@ -43,6 +43,7 @@
     "jquery": "^3.4.1",
     "jquery-pjax": "^2.0.1",
     "pjax": "^0.2.8",
+    "popper.js": "^1.14.3",
     "webpack-dev-middleware": "^3.7.2"
   }
 }

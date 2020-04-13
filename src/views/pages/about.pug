@@ -1,7 +1,7 @@
 extends ../layout.pug
 
 block content
-    .banner 
+    .banner
         .container
             .row.justify-content-between
                 .col-md-6.order-2.order-lg-1
@@ -15,18 +15,16 @@ block content
     .about-me
         .container
             .row
-                .col-md-8
+                .col-md-6
                     .about-me__content
                         .about-me__content--subtitle= about_me_subtitle
                         .about-me__content--title= about_me_title
                         .about-me__content--text!= about_me_text
+                .col-md-6
+                    img.banner__image(src="dist/img/about-me-code.svg")
                 .col-md-8
                     .about-me__content
                         .about-me__content--title= about_lanuages_title
-                            - var i = 1;
-                            - var last_range = 0
                         ul.row
                             each language in about_lanuages
                                 li.col-md-6= language
-
-
