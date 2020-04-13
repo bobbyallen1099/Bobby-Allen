@@ -16,6 +16,13 @@ footer.footer
                         each page in routes
                             li
                                 a(href= page.page_route)= page.page_name
+                .col-md-3.py-1
+                    h5 Useful links
+                    ul.p-0.pl-4
+                        li
+                            a(href="https://github.com/bobbyallen1099" target="_blank") Github
+                        li
+                            a(href="https://codepen.io/bobbyallen" target="_blank") Codepen
                 .col-md-6.py-1
                     form(action="https://formspree.io/xgelpgng" method="post")
                         .d-flex.align-items-end
@@ -24,13 +31,6 @@ footer.footer
                                 input#email(name="email" placeholder="Email address").form-control
                             div
                                 button.btn.btn-primary.ml-3 Register
-                .col-md-3.py-1
-                    h5 Useful links
-                    ul.p-0.pl-4
-                        li
-                            a(href="https://github.com/bobbyallen1099" target="_blank") Github
-                        li
-                            a(href="https://codepen.io/bobbyallen" target="_blank") Codepen
 
     .footer__copyright
         .container
