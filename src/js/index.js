@@ -6,6 +6,8 @@ import johnFowlers from '../images/john-fowlers.jpg';
 import marfleet from '../images/marfleet.jpg';
 import haywardMoon from '../images/hayward-moon.jpg';
 import bobbyAllen from '../images/bobby-allen.jpg';
+import bobbysShop from '../images/bobbys-shop.jpg';
+import bobbysBlog from '../images/bobbys-blog.jpg';
 import 'bootstrap';
 
 var $ = require("jquery");

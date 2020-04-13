@@ -3,7 +3,35 @@
         .row
             .col-md-9
                 h2 Lets get in contact
-                h5.text-muted I'd love to hear from you.
-            .col-md-3
-                a.btn.btn-primary.btn-block(href="/contact") Get in contact
+                h5 I'd love to hear from you.
+            .col-md-3.d-flex.align-items-center
+                a.btn.btn-light.btn-block(href="/contact") Get in contact
 footer.footer
+    .container
+        .footer__content
+            .row
+                .col-md-3
+                    h3 Bobby Allen
+                    ul.p-0.pl-4
+                        each page in routes
+                            li
+                                a(href= page.page_route)= page.page_name
+                .col-md-6
+                    form(action="https://formspree.io/xgelpgng" method="post")
+                        .d-flex.align-items-end
+                            .form-group.m-0.w-100
+                                label.form-label(for="email") Sign up to the newsletter
+                                input#email(name="email" placeholder="Email address").form-control
+                            div
+                                button.btn.btn-primary.ml-3 Register
+                .col-md-3
+                    h5 Useful links
+                    ul.p-0.pl-4
+                        li
+                            a(href="https://github.com/bobbyallen1099" target="_blank") Github
+                        li
+                            a(href="https://codepen.io/bobbyallen" target="_blank") Codepen
+
+    .footer__copyright
+        .container
+            p &copy; #{new Date().getFullYear()} Bobby Allen 
