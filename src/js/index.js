@@ -8,6 +8,9 @@ import haywardMoon from '../images/hayward-moon.jpg';
 import bobbyAllen from '../images/bobby-allen.jpg';
 import bobbysShop from '../images/bobbys-shop.jpg';
 import bobbysBlog from '../images/bobbys-blog.jpg';
+import codePen from '../images/codepen.svg';
+import gitHub from '../images/github.svg';
+import delayRepayGenie from '../images/drg.jpg';
 import 'bootstrap';
 
 var $ = require("jquery");

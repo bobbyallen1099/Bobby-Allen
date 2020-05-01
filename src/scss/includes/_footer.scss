@@ -13,4 +13,20 @@
             margin: 0;
         }
     }
+
+    ul {
+        list-style: none;
+        margin-top: 1rem;
+        padding: 0;
+        display: flex;
+        li {
+            padding-right: 1rem;
+        }
+    }
+    .useful-links {
+        img {
+            width: 32px;
+            margin-right: 0.5rem;
+        }
+    }
 }

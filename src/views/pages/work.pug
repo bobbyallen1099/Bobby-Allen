@@ -27,7 +27,7 @@ block content
                         .work_section_text These are pojects I build with Ruby On Rails while working for Digital Reflow, they are built using an open source CMS called
                             a.ml-1(href="https://www.spinacms.com/") Spina
                     each work in my_work.ruby
-                        .col-md-4
+                        .col-md-4.p-2
                             .work
                                 .work__image(style="background-image: url('"+ work.work_image +"')")
                                 .work__content
@@ -39,7 +39,7 @@ block content
                     .col-md-12.mb-2
                         .work_section_title Laravel projects
                     each work in my_work.laravel
-                        .col-md-4
+                        .col-md-4.p-2
                             .work
                                 .work__image(style="background-image: url('"+ work.work_image +"')")
                                 .work__content
@@ -50,8 +50,8 @@ block content
                 .row.py-2
                     .col-md-12.mb-2
                         .work_section_title Other projects
-                    each work in my_work.node
-                        .col-md-4
+                    each work in my_work.other
+                        .col-md-4.p-2
                             .work
                                 .work__image(style="background-image: url('"+ work.work_image +"')")
                                 .work__content

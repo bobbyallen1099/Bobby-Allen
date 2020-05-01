@@ -21,27 +21,47 @@ block pagecontent
             },
         ]
 
+        var footer_title = "Committed to design"
+        var footer_text = "A proud web developer committed to creating innovative designs that aim to be professional and tailored to every new idea. Striving to collaborate with a business to make a difference in design and development. Let's create!"
     //- Home
     //- Home banner
     -
         var home_banner_subtitle = "I'm an"
         var home_banner_title = "Experienced designer & web developer"
         var home_banner_text = "I'm a full stack developer with a passion for challenging and unique projects."
-        var home_banner_button_text = "Learn more"
-        var home_banner_button_link = "/about"
+        var home_banner_button_text = "Contact me"
+        var home_banner_button_link = "/contact"
 
     //- Home skills
     -
         var home_technical_skills = [
             {
-            'skill_title': 'Web Development',
-            'skill_text': 'I have skills for both backend and front end website development, always assuring I have clean and functional websites.'
+                'skill_title': 'Web Development',
+                'skill_text': 'I have skills for both backend and front end website development, always assuring I have clean and functional websites.',
+                'modal_name': '#webDevelopmentModal'
             },
             {
-            'skill_title': 'Design',
-            'skill_text': 'Having a website both looking great and easy to use is always something I strive for, UI and UX are both important for me.'
+                'skill_title': 'Design',
+                'skill_text': 'Having a website both looking great and easy to use is always something I strive for, UI and UX are both important for me.',
+                'modal_name': '#designModal'
             }
         ]
+
+    -
+        //- Home modals
+
+        //- Web development
+        var web_development_fulltext = "I love to keep up with the latest technologies avalible to continue my personal grown and skill set, I love to continuously improve myself to be the best I can.";
+        var web_lanuages_title = "My development Languages"
+        var web_lanuages = ["HTML", "CSS", "JS", "JQuery", "NPM", "Express", "Webpack", "HAML", "PUG", "SASS", "Laravel", "Ruby on rails", "PHP", "Coldfusion", "GIT", "MYSQL"]
+        
+        //- Design
+        var design_fulltext = "I've always loved and appreciated great design, which is why I took such an interest into websites & design.";
+        var design_lanuages_title = "My design skills"
+        var design_lanuages = ["Adobe XD", "Adobe Photoshop", "Adobe illustrator", "UX (User experience)", "UI (User interface)", "Website design", "Logo design", "Artwork design", "Maintaining consistency", "Brand creation"]
+
+        //- About me
+        var about_me_text = "Even from a young age of 12 I've always been intrigued by technology and curious with how and why they function. At age 13 I built my very first computer. Growing and building my curiosity not just on how they work but by how the very sites I love and use run. I always strived for a challenge of knowing and the answer to why? until I decided to work towards a career in web design to understand my question deeper. I always aim to improve and adapt to new trends and learn and that is a commitment I still hold high to today. <br><br> In my free time, I enjoy spending time with my family. Keeping up with the newest technology. I'm also known as a bit of a nerd in the family always helping and fixing various tech issues they may have."
 
     //- Home about
     -
@@ -51,6 +71,11 @@ block pagecontent
         var home_about_me_button_text = "Read more"
         var home_about_me_button_link = "/about"
 
+    //- Home work
+    -
+        var home_work_banner_subtitle = "Discover"
+        var home_work_banner_title = "My work"
+
     //- About
     //- About banner
     -
@@ -59,16 +84,6 @@ block pagecontent
         var about_banner_text = "I'm a full stack developer with a passion for clean and unique projects, I strive for challenge."
         var about_banner_button_text = "Get in contact"
         var about_banner_button_link = "/contact"
-
-    //- About content
-    -
-        var about_me_subtitle = "Discover"
-        var about_me_title = "My story"
-        var about_me_text = "I've always been interested in anything computers since the young age of 13, since then I've grew my skills and focused on improving myself everyday. Learning new skills and expanding my horizons,  I always strive to improve and that's still a commitment I hold to this day. <br><br> In my free time I love to spend time with my family, listen to music, build computers and binge Netflix shows and watch youtube."
-
-    -
-        var about_lanuages_title = "My development Languages"
-        var about_lanuages = ["HTML", "CSS", "JS", "JQuery", "NPM", "Express", "Webpack", "HAML", "PUG", "SASS", "Laravel", "Ruby on rails", "PHP", "Coldfusion", "GIT", "MYSQL"]
 
     //- Work
     //- Work banner
@@ -115,7 +130,13 @@ block pagecontent
                     'work_link': 'https://github.com/bobbyallen1099/Bobbys-shop/'
                 },
             ],
-            'node': [
+            'other': [
+                {
+                    'work_image': 'dist/img/drg.jpg',
+                    'work_title': "Delay Repay Genie",
+                    'work_text': 'This project I worked with a company called Travel Compensation Services, which I designed and rebranded from their previous Delay Repay Sniper, focusing on becoming modern while having a more friendly appeal I worked with them to create this.',
+                    'work_link': 'https://www.delayrepaygenie.com/'
+                },
                 {
                     'work_image': 'dist/img/bobby-allen.jpg',
                     'work_title': "Bobby's portfolio",

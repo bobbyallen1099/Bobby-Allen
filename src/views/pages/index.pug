@@ -21,7 +21,7 @@ block content
                         .technical-skills__item
                             .technical-skills__item--title= skill.skill_title
                             .technical-skills__item--text= skill.skill_text
-                            button.btn.btn-primary(data-toggle="modal" data-target="#aboutMeModal") Learn more
+                            button.btn.stretched-link.btn-primary(data-toggle="modal" data-target= skill.modal_name) Learn more
     .about-me
         .container
             .row
@@ -33,38 +33,67 @@ block content
                         .about-me__content--title= home_about_me_title
                         .about-me__content--text= home_about_me_text
 
-                        button.work__content--link(data-toggle="modal" data-target="#aboutMeModal")= home_about_me_button_text
+                        button.work__content--link(data-toggle="modal" data-target="#aboutModal")= home_about_me_button_text
 
     .my-work
         .container
             .my-work__content
                 .d-flex.align-items-center.justify-content-between
                     div
-                        .my-work__content--subtitle Explore
-                        .my-work__content--title My work
+                        .my-work__content--subtitle= home_work_banner_subtitle
+                        .my-work__content--title= home_work_banner_title
                     div
                         a.btn.btn-primary(href="/work") Explore more work
             .row
                 each work in my_work.ruby
-                    .col-md-4
+                    .col-md-4.p-2
                         .work
                             .work__image(style="background-image: url('"+ work.work_image +"')")
                             .work__content
                                 .work__content--title= work.work_title
                                 .work__content--description= work.work_text
                                 a.work__content--link(href= work.work_link target="_blank") View
-    .modal.fade#aboutMeModal(tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true")
+
+    .modal.fade#aboutModal(tabindex="-1" role="dialog" aria-hidden="true")
         .modal-dialog.modal-lg(role="document")
             .modal-content
                 .modal-header
-                    h5.modal-title A little about me
+                    h5.modal-title About me
                     button.close(type="button" data-dismiss="modal" aria-label="Close")
                         span(aria-hidden="true") &times;
                 .modal-body
                     p!= about_me_text
-                    .about-me__content--title= about_lanuages_title
+                .modal-footer
+                    button.btn.btn-primary(data-dismiss="modal") Close
+
+    .modal.fade#webDevelopmentModal(tabindex="-1" role="dialog" aria-hidden="true")
+        .modal-dialog.modal-lg(role="document")
+            .modal-content
+                .modal-header
+                    h5.modal-title Web development
+                    button.close(type="button" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true") &times;
+                .modal-body
+                    p!= web_development_fulltext
+                    .about-me__content--title= web_lanuages_title
                     ul.row
-                        each language in about_lanuages
+                        each language in web_lanuages
+                            li.col-md-6= language
+                .modal-footer
+                    button.btn.btn-primary(data-dismiss="modal") Close
+
+    .modal.fade#designModal(tabindex="-1" role="dialog" aria-hidden="true")
+        .modal-dialog.modal-lg(role="document")
+            .modal-content
+                .modal-header
+                    h5.modal-title Design
+                    button.close(type="button" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true") &times;
+                .modal-body
+                    p!= design_fulltext
+                    .about-me__content--title= design_lanuages_title
+                    ul.row
+                        each language in design_lanuages
                             li.col-md-6= language
                 .modal-footer
                     button.btn.btn-primary(data-dismiss="modal") Close

@@ -9,20 +9,7 @@
 footer.footer
     .container
         .footer__content
-            .row
-                .col-md-3.py-1
-                    h3 Bobby Allen
-                    ul.p-0.pl-4
-                        each page in routes
-                            li
-                                a(href= page.page_route)= page.page_name
-                .col-md-3.py-1
-                    h5 Useful links
-                    ul.p-0.pl-4
-                        li
-                            a(href="https://github.com/bobbyallen1099" target="_blank") Github
-                        li
-                            a(href="https://codepen.io/bobbyallen" target="_blank") Codepen
+            .row.justify-content-between
                 .col-md-6.py-1
                     form(action="https://formspree.io/xgelpgng" method="post")
                         .d-flex.align-items-end
@@ -31,7 +18,19 @@ footer.footer
                                 input#email(name="email" placeholder="Email address").form-control
                             div
                                 button.btn.btn-primary.ml-3 Register
-
+                    .useful-links
+                        a(href="https://github.com/bobbyallen1099" target="_blank")
+                            img(src="dist/img/github.svg")
+                        a(href="https://codepen.io/bobbyallen" target="_blank")
+                            img(src="dist/img/codepen.svg")
+                    ul
+                        each page in routes
+                            li
+                                a(href= page.page_route)= page.page_name
+                .col-md-5.py-1
+                    h4= footer_title
+                    p= footer_text
+ 
     .footer__copyright
         .container
             p &copy; #{new Date().getFullYear()} Bobby Allen 
