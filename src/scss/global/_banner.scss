@@ -1,12 +1,12 @@
 .banner {
     background: $light;
     border-bottom: 1px solid darken($light, 10);
-    padding: 2rem 0 4rem;
+    padding: 3rem 0;
     position: relative;
     margin-bottom: 1.5rem;
 
     @include respond-above(sm) {
-        padding: 4rem 0 6rem;
+        padding: 4rem 0;
     }
 
     .row {
