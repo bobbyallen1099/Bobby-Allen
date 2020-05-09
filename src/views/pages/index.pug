@@ -2,17 +2,17 @@ extends ../layout.pug
 
 block content
 
-    .banner
+    .banner.home-banner
         .container
             .row
-                .col-md-6.order-2.order-lg-1
+                .col-md-7.order-2.order-lg-1
                     .banner__content
                         .banner__content--subtitle= home_banner_subtitle
                         .banner__content--title= home_banner_title
                         .banner__content--text= home_banner_text
                         a.btn.btn-primary(href= home_banner_button_link)= home_banner_button_text
                 .col-md-6.col-lg-5.order-1.order-lg-2
-                    img.banner__image(src="dist/img/home-banner.svg")
+                    img.banner__image(src="dist/img/bobby-allen-logo.svg")
     .technical-skills
         .container
             .row

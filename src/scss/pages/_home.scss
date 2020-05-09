@@ -1,3 +1,18 @@
+.banner {
+    &.home-banner {
+        padding-top: 2rem;
+        padding-bottom: 0;
+
+        .banner__content {
+            &--title {
+                @extend .h1;
+            }
+        }
+    }
+}
+
+
+
 .technical-skills {
     &__item {
         @extend .card;
