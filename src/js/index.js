@@ -1,4 +1,5 @@
 import '../scss/app.scss';
+import bobbyAllenLogo from '../images/bobby-allen-logo.svg';
 import homeBanner from '../images/home-banner.svg';
 import aboutMe from '../images/about-me.svg';
 import aboutMeCode from '../images/about-me-code.svg';

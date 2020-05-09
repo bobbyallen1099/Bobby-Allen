@@ -7,7 +7,7 @@
     right: 0;
     z-index: 100;
 
-    @extend .py-3;
+    @extend .pt-2;
 
     &__wrapper {
         @extend .d-flex;
@@ -17,6 +17,11 @@
         &--logo {
             @extend .h4;
             @extend .m-0;
+
+            img {
+                height: 75px;
+                margin-right: 1rem;
+            }
         }
         &--toggle {
             width: 35px;
